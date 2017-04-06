@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Memory</title>
+    <link rel="stylesheet" href="res/css/styles-light.css">
+    <link rel="stylesheet" href="res/css/game.css">
+</head>
+
+<body>
+    <header>
+        <h1>Memory</h1>
+        <ul id="menu">
+        </ul>
+    </header>
+    <div class="decal"></div>
+    <content>
+        <div id="board">
+        </div>
+        <div id="success" class="hidden">
+            <h1>Gewonnen!<br/>Klick um ein neues Spiel zu starten.</h1>
+        </div>
+    </content>
+    <footer>
+    </footer>
+    <script src="js/libs/mme-helper-1.0.0.min.js"></script>
+    <script src="js/src/MemoryGame.js"></script>
+    <script src="js/src/MemoryCard.js"></script>
+    <script src="js/src/MemoryView.js"></script>
+    <script src="js/src/MemoryController.js"></script>
+    <script src="js/src/Memory.js"></script>
+    <script>
+    Memory.Main.init();
+    </script>
+</body>
+
+</html>

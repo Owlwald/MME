@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MemeGenerator</title>
+    <link rel="stylesheet" href="res/css/styles-light.css">
+    <link rel="stylesheet" href="res/css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>MemeGenerator</h1>
+        <!-- Menu with meme templates -->
+        <ul id="menu" class="menu">
+            <i class="drop-down-handle fa fa-chevron-circle-down"></i>
+            <li><img class="thumbnail active" src="" /></li>
+        </ul>
+    </header>
+    <div class="decal"></div>
+    <!-- Content area with canvas and toolbox -->
+    <content>
+        <div id="image-container" class="image-container">
+            <h1 id="meme-title">Create a new meme</h1>
+            <!-- Workarea with canvas -->
+            <div id="workarea" class="workarea">
+                <h2 class="workarea-title">Drop Image here or chose template from menu</h2>
+                <canvas  id="meme">
+                    Sorry, canvas not supported
+                </canvas>
+            </div>
+            <!-- Toolbox -->
+        <div id="tools" class="tools">
+            <label>Title</label><br />
+            <input id="input-title" type="text" placeholder="Title" autofocus /><br />
+
+            <label>Text</label><br />
+            <input id="input-top" type="text" class="input-text" placeholder="Text Top" /><br />
+            <input id="input-bottom" type="text" class="input-text" placeholder="Text Bottom" /><br />
+
+            <label for="input-font">Font</label><br />
+            <select id="input-font" class="meme-input">
+                <option>Impact</option>
+                <option>Comic Sans MS</option>
+            </select><br/>
+
+            <input id="input-caps" type="checkbox" class="meme-input" name="caps" />
+            <label for="input-caps">Caps?</label><br />
+
+            <input id="input-outline" type="checkbox" name="outline" class="meme-input" />
+            <label for="input-outline">Outline?</label><br />
+
+            <button id="button-create" class="button button-create" type="button">Create Meme</button>
+            <button id="button-reset" class="button button-reset" type="button">Reset</button>
+        </div>
+        </div>
+    </content>
+    <footer>
+    </footer>
+    <script src="js/libs/mme-helper.min.js"></script>
+    <script src="js/src/MemeGenerator.js"></script>
+    <script src="js/src/Toolbox.js"></script>
+    <script src="js/src/MemeController.js"></script>
+    <script src="js/src/MemeSelector.js"></script>
+    <script src="js/src/ServerConnector.js"></script>
+    <script>
+        MemeGenerator.init();
+    </script>
+</body>
+
+</html>
